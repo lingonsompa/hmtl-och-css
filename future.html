@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Thomas Östervall">
-    <meta name="description" content="Page about my future.">
+    <meta name="description" content="Sida om min framtid.">
     <meta name="generator" content="pycharm">
-    <meta name=keywords" content="framtid">
+    <meta name=keywords" content="min framtid">
     <meta name="robots" content="index">
-    <title>Future</title>
+    <title>Framtid</title>
 </head>
 <body>
 <header>
@@ -35,13 +35,32 @@ Jag är inte säker på min framtid. Jag har lagt myycket tid på plugg under mi
         mer "traditionell" karriär. Samtidigt så finns det mycket som jag tycker är intressant i studierna,
         så det händer att jag leker med tanken på en akdademisk karriär.
 
-    <form enctype="multipart/form-data">
+
+        <details>
+  <summary>Bra att veta</summary>
+  <p>Jag är öppen för alla förslag, men om de inovlverar Indien kommer jag vara skeptisk. Min
+  mage är fortfarande lite traumatiserad sen sist.</p>
+</details>
+
+    <form method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+       <fieldset>
+           <legend>Framtidstips</legend>
+
         <label for="name">Namn:</label><br>
-         <input type="text" id="name" name="name"><br>
+         <input type="text" id="name" name="name" autofocus title="Ditt namn" required><br>
+        <label for="age">Ålder:</label><br>
+        <select name="age" id="age" title="Din ålder" required>
+        <option value="0-20">0-20</option>
+        <option value="20-40">20-40</option>
+        <option value="40-60">40-60</option>
+        <option value="60+">60+</option>
+        </select><br>
+        <label for="postNr">Postnummer:</label><br>
+         <input type="text" id="postNr" name="postNr" pattern="[0-9]{5}", title="Ditt postnummer" required><br>
         <label for="email">Email:</label> <br>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" title="Din mailaddres"><br>
         <label for="URL">URL:</label><br>
-        <input type="url" id="URL" name="URL"><br>
+        <input type="url" id="URL" name="URL"title="Relevant URL"><br>
 
         <label for="answer_yes"> Jag vill ha ett svar: </label>
         <input type="checkbox" id="answer_yes" name="answer_yes" value="yes"><br>
@@ -51,19 +70,24 @@ Jag är inte säker på min framtid. Jag har lagt myycket tid på plugg under mi
         <input type="radio" id="copy_no" name="copy" value="no"> <br>
         <b></b><label for="file">Välj en fil:</label>
         <input type="file" id="file" name="file"><br>
-        <textarea id="message" name="message" rows="4" cols="50">
-Ange ditt meddelande
-</textarea><br>
-        <label for="subject">Välj ett ämne:</label>
-        <select name="cars" id="subject"> <br>
-        <option value="alt1">alt1</option><br>
-        <option value="alt2">alt2</option><br>
+           <label for="subject">Vad handlar ditt medelande om?:</label>
+  <input list="subjects" name="subject" id="subject">
+  <datalist id="subjects">
+    <option value="Resa">
+    <option value="Karriär">
+  </datalist><br>
+  <textarea rows="4" cols="50" id=message", name="message" placeholder="Ange ditt meddelande"></textarea>
+  <br>
+<input type="submit", value=" Ange">
 
-        </select>
-
-
+</fieldset>
     </form>
+
+
     </article>
+
+
+
 
 </section>
 
